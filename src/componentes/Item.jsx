@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ producto, actualizarTotalSuma }) => {
   const handleClick = () => {
     actualizarTotalSuma(producto);
@@ -17,6 +19,7 @@ const Item = ({ producto, actualizarTotalSuma }) => {
         <button className="product-button" onClick={handleClick}>
           Agregar al carrito
         </button>
+        <Link className="verMas" to={`./item/${producto.id}`}>Ver mas</Link>
       </div>
     </div>
   );
